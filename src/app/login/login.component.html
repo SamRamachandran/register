@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="main1">
+  <div *ngIf="!isLoggedIn">
+    <label for="mobileNumber">Mobile Number:</label>
+  <input type="text" id="mobileNumber" [(ngModel)]="mobileNumber"><br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="password">
+  </div>
+  <button *ngIf="!isLoggedIn" (click)="handleLogin()">Login</button>
+  <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  
+</div>
+
+

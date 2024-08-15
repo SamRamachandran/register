@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<h1>ElectricalOrder Form </h1>
+<div class="container1">
+  <div class="container2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+      <div class="main1">
+        <div formGroupName="checkboxGroup">
+          <div class="one">
+            <h3>HDMI cable</h3>
+            <label>
+              <input type="checkbox" formControlName="option1" value="5"> 3ft-$5<br>
+              <input type="checkbox" formControlName="option2" value="18"> 14ft-$18 <br>
+              <input type="checkbox" formControlName="option3" value="22"> 20ft-$22 <br>
+              <input type="checkbox" formControlName="option4" value="38"> 50ft-$38 <br>
+              <input type="checkbox" formControlName="option5" value="50"> 100ft-$50 <br>         
+            </label>
+          </div>        
+          <div *ngIf="submitted && myForm.get('checkboxGroup').hasError('required')">
+            <span>At least one HDMI cable must be selected.</span>
+          </div>
+        </div>
+        <div formGroupName="checkboxGroup2">
+          <div class="main3">
+            <label>
+              <h3>USB drive </h3>
+                    <input type="checkbox" name="usn" formControlName="option6" value="2"> 8GB-$2 <br>
+                    <input type="checkbox" name="usn" formControlName="option7" value="5"> 16GB-$5 <br>
+                    <input type="checkbox" name="usn" formControlName="option8" value="12"> 32GB-$12 <br>
+                    <input type="checkbox" name="usn" formControlName="option9" value="20"> 64GB-$20  <br>
+                    <input type="checkbox" name="usn" formControlName="option10" value="35">12GB-$35 <br>
+                    <input type="checkbox" name="usn" formControlName="option11" value="50"> 25GB-$50 <br>        
+            </label>
+            <div *ngIf="submitted && myForm.get('checkboxGroup2').hasError('required')">
+              <span>At least one USB drive must be selected.</span>
+            </div>
+          </div>                
+        </div>
+        <div formGroupName="checkboxGroup3">
+          <div class="main3">
+            <label>
+              <h3>Accessories</h3>
+              <input type="checkbox" name="acc" formControlName="option12" value="8"> Wireless mouse -$8 <br>
+              <input type="checkbox" name="acc" formControlName="option13" value="5"> Wireless keyboard - $5 <br>
+              <input type="checkbox" name="acc" formControlName="option14" value="10"> Laptop stand - $10 <br>
+              <input type="checkbox" name="acc" formControlName="option15" value="25"> Bluetooth headphone -$25 <br>           
+            </label>
+            <div *ngIf="submitted && myForm.get('checkboxGroup3').hasError('required')">
+              <span>At least Accessories must be selected.</span>
+            </div>
+          </div>                
+        </div>  
+
+      </div>
+      <div class="pro">
+        <h3>Promo Code</h3>
+        <input type="text">
+      </div> 
+      <div class="two">
+        <div class="main4">
+          <h3>Shipping</h3>
+          <label>
+            <input type="radio" formControlName="radioGroup" value="45"> Overnight $45 <br>
+          </label>
+          <label>
+            <input type="radio" formControlName="radioGroup" value="8"> 2 day Delivery $8 <br>
+          </label>
+          <label>
+            <input type="radio" formControlName="radioGroup" value="6"> Standared Ground(5-7) days $6 <br>
+          </label>
+          <div *ngIf="submitted && myForm.get('radioGroup').hasError('required')">
+            <span>A radio button must be selected.</span>
+          </div>
+        </div>
+      
+          <div class="main5">
+            <h3>Order Total</h3>
+           <button type="submit">Calculate</button>
+    
+              <div *ngIf="submitted && myForm.valid">
+               
+               <p> $ :{{ totalSum }}</p>
+              </div>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>

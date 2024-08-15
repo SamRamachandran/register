@@ -1,0 +1,17 @@
+.main1{
+    background-color: rgb(202, 101, 101);
+    margin: 5px 4px;
+    background-size: cover;
+}
+.main1{
+    padding: 120px 450px ;
+    font-size: 25px;
+    
+
+}
+button{
+    padding: 7px;
+    margin: 10px 150px ;
+    cursor: pointer;
+    font-size: 25px;
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+    display: flex;
+    
+}
+.main{
+    background-color: cadetblue;
+}
+.main a{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: end;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    
+
+}
+.main12 {  
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 370px;
+}
+.main a:hover{
+    color: rgb(17, 17, 19);
+}

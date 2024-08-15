@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container1{
+    background-color: antiquewhite;
+}
+.main1{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 28px;
+    padding: 2px 40px;
+}
+
+.two{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 28px;
+    padding: 2px 40px;
+}
+.pro{
+    padding: 2px 200px;
+
+}
+h1{
+    font-size: 30px;
+    align-items: center;
+}
+
+h3{
+    font-size: 28px;
+    align-items: center;
+    padding: 10px 15px;
+}
+span{
+    font-size: 15px;
+    color: red;
+}
+
+
